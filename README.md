@@ -1,7 +1,7 @@
 # Login_Practice
-Una practica de un "login" haciendo uso de Django para la tarea de seguridad
+Una practica de un "login" haciendo uso de Django para la tarea de web
 
-Chicos, para poder arrancar esto abro la carpeta en el simbolo del sistema,
+Chicos, igual que con el otro para poder arrancar esto abro la carpeta en el simbolo del sistema,
 ejecuto el comando
 
     pip install virtualenv
@@ -30,38 +30,4 @@ Ejecuta el comando
 
     pip install django
 
-###### CHECKLIST DE LA RUBRICA
-
-    [OK]    Desarrollar una app para Web donde  solicite al usuario:
-
-        [OK]        username,
-
-        [OK]        nombre,
-
-        [OK]        apellido paterno,
-
-        [OK]        apellido materno,
-
-        [OK]        password,
-
-        [OK]        teléfono, y
-
-        [OK]        dirección,
-
-        [OK]        todos los campos son obligatorios
-
-    [OK]    La clave debe ser
-
-        [OK]        mínimo de 8 caracteres
-
-            [OK]            (incluir una letra mayúscula,
-
-            [OK]            un número y
-
-            [OK]            un carácter especial)
-
-        [OK]    El username solo puede registrarse una sola vez
-
-        [OK]    No debe haber duplicidad del username
-
-        [OK]    La app debe poder autenticar a los usuarios registrados
+Si por alguna razon no llega a cargar la barra animada del principio (el canvas) o la api me avisan por favor
