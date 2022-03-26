@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Authentication</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link type="text/css" rel="stylesheet" href='{% static "css/estilo.css" %}'>
+</head>
+
+<body>
+    <div id="content">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Mensaje:</strong> {{ message }}
+            <button type="button" class="close" data-dimiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+
+        <h2>Universidad Tecnológica de Chihuahua</h2>
+        <br>
+
+        <h3>LogIn hecho con Django</h3>
+        <br>
+
+        <h4 id="signup">Sign Up</h4>
+        <br>
+    </div>
+    <div id="formulario">
+        <form action="/signup" method="post">
+            <!-- Necesario por parte de Django-->
+            {% csrf_token %}
+
+            <!--Username -->
+            <label for="">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" placeholder="Escribe un nombre de usuario (solo letras y numeros)" required>
+            <br>
+            <!--Nombre -->
+            <label for="">Primer Nombre:</label>
+            <input type="text" id="fname" name="fname" placeholder="Escribe tu Nombre" required>
+            <br>
+            <!--Apellido Paterno -->
+            <label for="">Apellido Paterno:</label>
+            <input type="text" id="lname_patern" name="lname_patern" placeholder="Escribe tu Apellido Paterno" required>
+            <br>
+            <!--Apellido Materno -->
+            <label for="">Apellido Materno:</label>
+            <input type="text" id="lname_matern" name="lname_matern" placeholder="Escribe tu Apellido Materno" required>
+            <br>
+            <!--Telefono -->
+            <label for="">Telefono:</label>
+            <input type="text" id="tel" name="tel" placeholder="Escribe tu Telefono" required>
+            <br>
+            <!--Direccion de correo -->
+            <label for="">Dirección de Correo:</label>
+            <input type="email" id="email" name="email" placeholder="Escribe tu Dirección de Email" required>
+            <br>
+            <!--Password -->
+            <label for="">Password:</label>
+            <input type="password" id="pass1" name="pass1" placeholder="Crea tu Contraseña (mínimo 8 caracteres, una letra mayúscula, un número y un carácter especial)" required>
+            <label for="">Verificación:</label>
+            <input type="password" id="pass2" name="pass2" placeholder="Verifica tu contraseña" required>
+            <br>
+
+            <div id="content">
+                <button type="submit"><a href="home">&lt;&lt;Volver a Inicio</a></button>
+                <button type="submit">Registrarse</button>
+            </div>
+        </form>
+    </div>
+    <script src="" async defer></script>
+</body>
+
+</html>

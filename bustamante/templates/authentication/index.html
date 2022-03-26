@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--    -->
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Authentication</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link type="text/css" rel="stylesheet" href='{% static "css/estilo.css" %}'>
+    <!--
+    <script type="text/javascript" src="./script.js"></script>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    -->
+</head>
+
+<body id="body" onload="maquillar()">
+
+    <div id="content">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Mensaje:</strong> {{ message }}
+            <button type="button" class="close" data-dimiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+        <br> {% if user.is_authenticated %}
+        <div>
+            <header id="header">
+                <h1 id="titulo">Universidad Tecnológica de Chihuahua</h1>
+                <h2 id="titulo">Bienvenido a la Pokedex mas <br>simple del mundo {{ fname }}¡¡ </h1>
+                    <br>
+                    <button type="submit" id="outbutton"><a href="/signout">SignOut</a></button>
+                    <button id="mostrar" onclick="mostrar()">Mostrar Pokedex</button>
+            </header>
+
+
+            <div id="contenido">
+                <div id="div_seccion">
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <h1>Pagina web hecha con Django</h3>
+            <h2>-- El diseño grafico es nuestra pasión --</h4>
+                <canvas id="canvas" width="5"></canvas>
+                <div>
+                    <button type="submit"><a href="/signup">Crear un Usuario</a></button>
+                    <button type="submit"><a href="/signin">Iniciar sesión</a></button>
+                </div>
+                {% endif %}
+    </div>
+    <script src="" async defer></script>
+    <script type="text/javascript" src='{% static "js/script.js" %}'></script>
+</body>
+
+</html>
