@@ -1,5 +1,5 @@
-# Login_Practice
-Una practica de un "login" haciendo uso de Django para la tarea de web
+# Web_Homework
+Una practica haciendo uso de Django para la tarea de web
 
 Chicos, igual que con el otro para poder arrancar esto abro la carpeta en el simbolo del sistema,
 ejecuto el comando
