@@ -1,4 +1,7 @@
 # Web_Homework
+* Bryan Alexis González González 1118150022 
+* Moisés Isaac González Duran 1118150031 
+* Angel Emmanuel Contreras Dueñas 1118150005
 Una practica haciendo uso de Django para la tarea de web
 
 Chicos, igual que con el otro para poder arrancar esto abro la carpeta en el simbolo del sistema,
